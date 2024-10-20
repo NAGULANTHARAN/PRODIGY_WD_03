@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+
+    text-align: center;
+    color:rgb(141, 115, 208);
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .mode-selection button, #restartBtn, #toggleThemeBtn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--button-bg-color);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #restartBtn.hidden {
+    display: none;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    background-color: var(--cell-bg-color);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .cell:hover {
+    background-color: #ccc;
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  :root {
+    --bg-color: #f4f4f9;
+    --text-color: #000;
+    --button-bg-color: #4CAF50;
+    --cell-bg-color: #ddd;
+  }
+  
+  .dark-mode {
+    --bg-color: #333;
+    --text-color: #fff;
+    --button-bg-color: #888;
+    --cell-bg-color: #555;
+  }
+  
+  button:active {
+    opacity: 0.8;
+  }
+  
